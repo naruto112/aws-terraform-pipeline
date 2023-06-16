@@ -5,7 +5,7 @@
 
 resource "aws_instance" "vm" {
   depends_on    = [aws_vpc.vpc, aws_subnet.subnet]
-  ami           = "ami-0d527b8c289b4af7f"
+  ami           = "ami-022e1a32d3f742bd8"
   instance_type = "t2.micro"
   # key_name                    = aws_key_pair.key.key_name
   subnet_id                   = data.terraform_remote_state.vpc.outputs.subnet_id

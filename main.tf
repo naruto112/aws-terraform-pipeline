@@ -28,8 +28,8 @@ provider "aws" {
 }
 
 data "terraform_remote_state" "vpc" {
-  depends_on = [ aws_vpc.vpc, aws_subnet.subnet ]
-  backend = "s3"
+  depends_on = [aws_vpc.vpc, aws_subnet.subnet]
+  backend    = "s3"
   config = {
     bucket = "projeto2023-terraformoschetta"
     key    = "aws-vpc/terraform.tfstate"
